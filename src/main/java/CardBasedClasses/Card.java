@@ -33,8 +33,12 @@ public final class Card {
         return TYPE;
     }
 
-    public int[] getVALUES() {
-        return VALUES;
+    public int getDefaultValue() {
+        return VALUES[0];
+    }
+
+    public int getAltValue() {
+        return VALUES[1];
     }
 
     public Boolean isSPECIAL() {

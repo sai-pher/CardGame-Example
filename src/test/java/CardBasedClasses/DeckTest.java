@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class DeckTest {
 
     @Test
-    public void testDeckHas52Cadrs() {
+    public void testDeckHas52Cards() {
         Deck d = new Deck();
         assertEquals(52, d.getLength(), "Should contain 52 cards");
     }
