@@ -2,7 +2,7 @@ package CardBasedClasses;
 
 public enum Type {
 
-    STANDARD(10, false, 0, 0),
+    STANDARD(10, false, 2, 10),
     JOKER(1, false, 10, 10),
     QUEEN(1, false, 10, 10),
     KING(1, false, 10, 10),

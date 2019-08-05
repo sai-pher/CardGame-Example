@@ -65,12 +65,9 @@ public final class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
-               "SUITS=" + SUITS +
-               ", TYPE=" + TYPE +
-               ", VALUES=" + Arrays.toString(VALUES) +
-               ", SPECIAL=" + SPECIAL +
-               '}';
+        return String
+                .format("Card{SUITS=%s, TYPE=%s, VALUES=%s, SPECIAL=%s\n}", SUITS, TYPE, Arrays.toString(VALUES),
+                        SPECIAL);
     }
 
 

@@ -24,6 +24,16 @@ public final class Player {
      */
     public void takeNewCard(Card card) {
         hand.add(card);
+        updateHandScore(card);
+        checkLimit();
+    }
+
+    /**
+     * A method to add a cards value to the hand score.
+     *
+     * @param card A new card object whose value will be added to hand score
+     */
+    private void updateHandScore(Card card) {
         handTotalScore += card.getDefaultValue();
     }
 
@@ -32,7 +42,7 @@ public final class Player {
      * The method sets the players ready signal to true if hand score
      * exceeds the games limit, ending their turn.
      */
-    public void checkLimit() {
+    private void checkLimit() {
         if (handTotalScore >= KNOWN_LIMIT)
             ready = true;
     }
