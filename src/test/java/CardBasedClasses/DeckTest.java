@@ -20,4 +20,15 @@ class DeckTest {
         assertNotEquals(null, c, "Card should be drawn");
     }
 
+    @Test
+    public void testCardsDrawnNotEqual() {
+        Deck d  = new Deck();
+        Card c1 = d.draw();
+        Card c2 = d.draw();
+
+        System.out.println(c1 + "\n" + c2);
+
+        assertNotEquals(c1, c2, "Cards drawn should not be the same");
+    }
+
 }

@@ -17,6 +17,15 @@ public final class Deck {
         length = deck.size();
     }
 
+    public void deckReset() {
+        deck.clear();
+
+        nextCard = 0;
+
+        createDeck();
+        shuffle();
+    }
+
     private void createDeck() {
 
         for (Suits s : Suits.values()) {

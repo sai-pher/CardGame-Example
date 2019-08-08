@@ -34,9 +34,9 @@ class PlayerTest {
     @Test
     void checkLimit() {
         p.takeNewCard(aC1);
-        assertEquals(false, p.getReady(), "Ready state should be false");
+        assertEquals(false, p.showReady(), "Ready state should be false");
         p.takeNewCard(aC2);
-        assertEquals(true, p.getReady(), "Ready state should be True");
+        assertEquals(true, p.showReady(), "Ready state should be True");
     }
 
     @Test
@@ -52,9 +52,9 @@ class PlayerTest {
     @Test
     void makeReady() {
         p.makeReady();
-        assertEquals(true, p.getReady(), "Ready should be true");
+        assertEquals(true, p.showReady(), "Ready should be true");
         p.makeReady();
-        assertEquals(true, p.getReady(), "Ready should be true");
+        assertEquals(true, p.showReady(), "Ready should be true");
     }
 
     @Test
@@ -72,9 +72,9 @@ class PlayerTest {
 
     @Test
     void getReady() {
-        assertEquals(false, p.getReady(), "Ready should be false");
+        assertEquals(false, p.showReady(), "Ready should be false");
         p.makeReady();
-        assertEquals(true, p.getReady(), "Ready should be true");
+        assertEquals(true, p.showReady(), "Ready should be true");
     }
 
     @Test

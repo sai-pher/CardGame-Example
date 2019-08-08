@@ -86,7 +86,14 @@ public final class Player {
     /**
      * @return The boolean value of a players ready state.
      */
-    public Boolean getReady() {
+    public Boolean showReady() {
         return ready;
     }
+
+    public void playerReset() {
+        handTotalScore = 0;
+        hand.clear();
+    }
+
+
 }

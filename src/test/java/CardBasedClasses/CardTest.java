@@ -48,13 +48,13 @@ class CardTest {
         int heartCards   = 0;
 
         for (Card c : mockDeck) {
-            if (c.getSUITS() == Suits.CLUB)
+            if (c.getSuits() == Suits.CLUB)
                 clubCards += 1;
-            else if (c.getSUITS() == Suits.SPADE)
+            else if (c.getSuits() == Suits.SPADE)
                 spadeCards += 1;
-            else if (c.getSUITS() == Suits.DIAMOND)
+            else if (c.getSuits() == Suits.DIAMOND)
                 diamondCards += 1;
-            else if (c.getSUITS() == Suits.HEART)
+            else if (c.getSuits() == Suits.HEART)
                 heartCards += 1;
         }
 
@@ -73,15 +73,15 @@ class CardTest {
         int aceCards      = 0;
 
         for (Card c : mockDeck) {
-            if (c.getTYPE() == Type.STANDARD)
+            if (c.getType() == Type.STANDARD)
                 standardCards += 1;
-            else if (c.getTYPE() == Type.JOKER)
+            else if (c.getType() == Type.JOKER)
                 jokerCards += 1;
-            else if (c.getTYPE() == Type.QUEEN)
+            else if (c.getType() == Type.QUEEN)
                 queenCards += 1;
-            else if (c.getTYPE() == Type.KING)
+            else if (c.getType() == Type.KING)
                 kingCards += 1;
-            else if (c.getTYPE() == Type.ACE)
+            else if (c.getType() == Type.ACE)
                 aceCards += 1;
         }
 
@@ -95,12 +95,12 @@ class CardTest {
     @Test
     void getVALUES() {
         for (Card c : mockDeck) {
-            assertEquals(c.getTYPE().getDefaultValue(), c.getDefaultValue(),
+            assertEquals(c.getType().getDefaultValue(), c.getDefaultValue(),
                          "Cards default value should match types' value.");
-            if (c.getTYPE() == Type.ACE)
-                assertEquals(c.getTYPE().getAltValue(), c.getAltValue(), "Cards alt value should match types' value.");
+            if (c.getType() == Type.ACE)
+                assertEquals(c.getType().getAltValue(), c.getAltValue(), "Cards alt value should match types' value.");
             else
-                assertEquals(c.getTYPE().getDefaultValue(), c.getAltValue(),
+                assertEquals(c.getType().getDefaultValue(), c.getAltValue(),
                              "Cards alt value should match types' value.");
 
         }
@@ -114,20 +114,20 @@ class CardTest {
         int heartCards   = 0;
 
         for (Card c : mockDeck) {
-            if (c.getSUITS() == Suits.CLUB) {
-                if (c.isSPECIAL())
+            if (c.getSuits() == Suits.CLUB) {
+                if (c.isSpecial())
                     clubCards += 1;
             }
-            else if (c.getSUITS() == Suits.SPADE) {
-                if (c.isSPECIAL())
+            else if (c.getSuits() == Suits.SPADE) {
+                if (c.isSpecial())
                     spadeCards += 1;
             }
-            else if (c.getSUITS() == Suits.DIAMOND) {
-                if (c.isSPECIAL())
+            else if (c.getSuits() == Suits.DIAMOND) {
+                if (c.isSpecial())
                     diamondCards += 1;
             }
-            else if (c.getSUITS() == Suits.HEART) {
-                if (c.isSPECIAL())
+            else if (c.getSuits() == Suits.HEART) {
+                if (c.isSpecial())
                     heartCards += 1;
             }
         }
