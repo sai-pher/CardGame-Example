@@ -8,12 +8,14 @@ import java.util.List;
 public final class Player {
 
     private final int        THRESHOLD      = 15;
+    private final int        playerID;
     private final int        KNOWN_LIMIT;
     private       List<Card> hand           = new ArrayList<>();
     private       int        handTotalScore = 0;
     private       Boolean    ready          = false;
 
-    public Player(final int limit) {
+    public Player(int playerID, final int limit) {
+        this.playerID = playerID;
         KNOWN_LIMIT = limit;
     }
 
@@ -93,7 +95,16 @@ public final class Player {
     public void playerReset() {
         handTotalScore = 0;
         hand.clear();
+        ready = false;
     }
 
 
+    public int getPlayerID() {
+        return playerID;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Player %d", playerID);
+    }
 }

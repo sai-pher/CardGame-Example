@@ -67,9 +67,9 @@ public final class Card {
     public String toString() {
 
         if (this.type == Type.STANDARD)
-            return String.format("%s of %s\n", getDefaultValue(), suits);
+            return String.format("<--%s of %s--> ", getDefaultValue(), suits);
         else
-            return String.format("%s of %s\n", type, suits);
+            return String.format(" <> %s of %s <> ", type, suits);
     }
 
 

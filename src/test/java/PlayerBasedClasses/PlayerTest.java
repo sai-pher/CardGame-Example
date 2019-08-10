@@ -19,7 +19,7 @@ class PlayerTest {
 
     @BeforeEach
     void setUp() {
-        p = new Player(21);
+        p = new Player(1, 21);
         sC = new Card(Suits.CLUB, Type.STANDARD, Type.STANDARD.getDefaultValue());
         aC1 = new Card(Suits.CLUB, Type.ACE, Type.ACE.getDefaultValue());
         aC2 = new Card(Suits.CLUB, Type.ACE, Type.ACE.getDefaultValue());

@@ -10,7 +10,7 @@ import java.util.Objects;
 
 //TODO: Make defensive
 
-public class Game {
+public class GameMechanics {
 
     private final Deck         deck;
     private final int          limit;
@@ -18,7 +18,7 @@ public class Game {
     private       int          round   = 1;
     private       List<Player> players = new ArrayList<>();
 
-    public Game(int limit) {
+    public GameMechanics(int limit) {
         this.deck = new Deck();
         this.limit = limit;
         this.initialCardCount = 2;
@@ -182,11 +182,11 @@ public class Game {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Game)) return false;
-        Game game = (Game) o;
-        return limit == game.limit &&
-               Objects.equals(deck, game.deck) &&
-               Objects.equals(players, game.players);
+        if (!(o instanceof GameMechanics)) return false;
+        GameMechanics gameMechanics = (GameMechanics) o;
+        return limit == gameMechanics.limit &&
+               Objects.equals(deck, gameMechanics.deck) &&
+               Objects.equals(players, gameMechanics.players);
     }
 
     @Override
@@ -196,7 +196,7 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game{" +
+        return "GameMechanics{" +
                "deck=" + deck +
                ", limit=" + limit +
                ", players=" + players +
